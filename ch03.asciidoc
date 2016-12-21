@@ -241,7 +241,7 @@ Bitcoin Core offers more than one hundred configuration options that modify the 
 
 ----
  bitcoind --help
-Bitcoin Core Daemon version v0.11.2
+Bitcoin Core Daemon version v0.13.1
 
 Usage:
   bitcoind [options]                     Start Bitcoin Core Daemon
