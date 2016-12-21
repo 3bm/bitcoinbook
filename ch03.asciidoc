@@ -235,39 +235,9 @@ Why would you want to run a node? Here are some of the most common reasons for r
 
 If you're reading this book and interested in developing bitcoin software, you should be running your own node.
 
-==== Running Bitcoin Core for the First Time
-
-When you first run bitcoind, it will remind you to create a configuration file with a strong password for the JSON-RPC interface. This password controls access to the Application Programming Interface (API) offered by Bitcoin Core.
-
-Run bitcoind by typing +bitcoind+ into the terminal:
-
-----
-$ bitcoind
-Error: To use the "-server" option, you must set a rpcpassword in the configuration file:
-/home/ubuntu/.bitcoin/bitcoin.conf
-It is recommended you use the following random password:
-rpcuser=bitcoinrpc
-rpcpassword=2XA4DuKNCbtZXsBQRRNDEwEY2nM6M4H9Tx5dFjoAVVbK
-(you do not need to remember this password)
-The username and password MUST NOT be the same.
-If the file does not exist, create it with owner-readable-only file permissions.
-It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %s | mail -s "Bitcoin Alert" admin@foo.com
-----
-
-As you can see, the first time you run +bitcoind+ it tells you that you need to build a configuration file, with at least an rpcuser and rpcpassword entry. Additionally, it is recommended you set up the alerting mechanism. In the next section we will examine the various configuration options and set up a configuration file. 
-
 ==== Configuring the Bitcoin Core Node
 
-Edit the configuration file in your preferred editor and set the parameters, replacing the password with a strong password as recommended by bitcoind. Do _not_ use the password shown in the book. Create a file inside the +.bitcoin+ directory (under your user's home directory) so that it is named +.bitcoin/bitcoin.conf+ and provide a username and password:
-
-[source,ini]
-----
-rpcuser=bitcoinrpc
-rpcpassword=CHANGE_THIS
-----
-
-In addition to the +rpcuser+ and +rpcpassword+ options, Bitcoin Core offers more than one hundred configuration options that modify the behavior of the network node, the storage of the blockchain and many other aspects of its operation. To see a listing of these options, run +bitcoind  --help+:
+Bitcoin Core offers more than one hundred configuration options that modify the behavior of the network node, the storage of the blockchain and many other aspects of its operation. To see a listing of these options, run +bitcoind  --help+:
 
 ----
  bitcoind --help
